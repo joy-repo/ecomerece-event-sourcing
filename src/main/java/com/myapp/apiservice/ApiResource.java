@@ -51,7 +51,7 @@ public class ApiResource {
 		}
 		com.setCommandName(Commands.ADD_TO_CART);
 		com.setEntityType("CART");
-		com.setEntityId(0l);
+		com.setEntityId(0l); // no usage in the domain as of now
 		com.setCommandType("DS");
 		com.setTopic(Topics.FROM_API);
 		
