@@ -1,9 +1,5 @@
 package com.myapp.ds.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.stereotype.Service;
-
 import com.myapp.contants.Commands;
 import com.myapp.contants.Constant;
 import com.myapp.contants.Events;
@@ -12,8 +8,10 @@ import com.myapp.dto.MessageDto;
 import com.myapp.model.Command;
 import com.myapp.model.Event;
 import com.myapp.model.EventStore;
-import com.myapp.repo.CommandRepo;
 import com.myapp.repo.EventStoreRepo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.stereotype.Service;
 
 @Service
 public class DomainServiceHandler {
@@ -48,6 +46,7 @@ public class DomainServiceHandler {
 		mdto.setMessageType(Constant.COMMAND);
 
 		template.send(Topics.FROM_DS, mdto);
+
 	}
 
 	public void handleEvent(Event event, String uuid) {

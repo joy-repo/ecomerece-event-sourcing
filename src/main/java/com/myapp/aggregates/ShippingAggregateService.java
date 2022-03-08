@@ -58,4 +58,6 @@ public class ShippingAggregateService {
 
 	}
 
+	//TODO: compensate DoShipping
+
 }
