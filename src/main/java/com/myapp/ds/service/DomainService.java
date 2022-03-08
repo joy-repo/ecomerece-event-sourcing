@@ -8,6 +8,11 @@ import com.myapp.contants.Events;
 import com.myapp.model.Command;
 import com.myapp.model.Event;
 
+
+/// Routi8ng
+
+//(state  && Command/Event ) -->
+
 @Service
 public class DomainService {
 	@Autowired
